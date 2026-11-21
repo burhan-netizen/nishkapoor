@@ -266,8 +266,8 @@
     REELS.forEach(r => {
       const c = document.createElement('div');
       c.className = 'rv-card'; c.tabIndex = 0; c.setAttribute('role', 'button');
-      c.setAttribute('aria-label', 'Play video: ' + r.t); c.dataset.cursor = 'view'; c.dataset.cursorLabel = 'PLAY';
-      c.innerHTML = `<div class="rv-media"><video src="assets/video/${r.id}-preview.mp4" poster="assets/video/${r.id}.jpg" muted loop playsinline preload="none" class="autoplay-inview"></video><span class="vt-play"><svg><use href="#i-play"/></svg></span></div><div class="rv-cap"><small>${r.k}</small><h4>${r.t}</h4></div>`;
+      c.setAttribute('aria-label', 'Play video: ' + r.t); c.dataset.cursor = 'view'; c.dataset.cursorLabel = 'SOUND ON';
+      c.innerHTML = `<div class="rv-media"><video src="assets/video/${r.id}-preview.mp4" poster="assets/video/${r.id}.jpg" muted loop playsinline preload="none" class="autoplay-inview"></video><span class="rv-mute" aria-hidden="true"><svg><use href="#i-mute"/></svg></span><span class="rv-sound"><svg><use href="#i-sound"/></svg>Watch with sound</span></div><div class="rv-cap"><small>${r.k}</small><h4>${r.t}</h4></div>`;
       c.addEventListener('click', () => openVideo(`assets/video/${r.id}.mp4`));
       c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(`assets/video/${r.id}.mp4`); } });
       reel.appendChild(c);

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=15">
+<link rel="stylesheet" href="assets/css/styles.css?v=16">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 <script type="application/ld+json">
 {
@@ -69,6 +69,8 @@
     <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></symbol>
     <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></symbol>
     <symbol id="i-g" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22zM6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9zM12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5L6.4 10C7.2 7.7 9.4 5.9 12 5.9z"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></g></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor"/><path d="m22 9-6 6M16 9l6 6"/></g></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12C6.4 11.4 11.4 6.4 12 0z"/></symbol>
   </defs>
 </svg>
@@ -87,6 +89,7 @@
 
 <!-- Nav -->
 <header class="nav" id="nav">
+  <div class="demo-bar">Demo website prepared for <b>Nish Kapoor</b> by <a href="https://themagolabs.com" target="_blank" rel="noopener">Mago Labs</a>. Not the official live site.</div>
   <div class="wrap nav-in">
     <a href="#top" class="nav-logo" aria-label="Nish Kapoor Real Estate Group, Royal LePage — home"><img src="assets/brand/nk-logo-clean.png" alt="Nish Kapoor Real Estate Group" width="900" height="538"><i class="nav-div" aria-hidden="true"></i><img class="nav-rlp" src="assets/brand/royal-lepage-white.png" alt="Royal LePage" width="900" height="295"></a>
     <nav aria-label="Primary">
@@ -410,7 +413,7 @@
       <div class="sem-media rv">
         <div class="m tall js-video" data-src="assets/video/11.mp4" data-cursor="view" data-cursor-label="PLAY" role="button" tabindex="0" aria-label="Play seminar video">
           <video src="assets/video/9-preview.mp4" poster="assets/video/9.jpg" muted loop playsinline preload="none" class="autoplay-inview"></video>
-          <span class="vt-play"><svg><use href="#i-play"/></svg></span>
+          <span class="rv-mute" aria-hidden="true"><svg><use href="#i-mute"/></svg></span><span class="rv-sound"><svg><use href="#i-sound"/></svg>Watch with sound</span>
         </div>
         <div class="m sq"><img src="assets/img/13.jpg" alt="Nish beside his Buy Smart, Sell Strong, Invest Wisely banner" loading="lazy"></div>
         <div class="m sq"><img src="assets/img/seminar-nish.jpg" alt="Nish presenting at his First-Time Home Buyer Seminar" loading="lazy" style="object-position:50% 30%"></div>
@@ -547,6 +550,7 @@
       <p>© <span id="yr">2026</span> Nish Kapoor, Salesperson · Royal LePage Integrity Realty, Brokerage. Independently owned and operated. Not intended to solicit buyers or sellers currently under contract. The trademarks REALTOR®, REALTORS® and the REALTOR® logo are controlled by CREA. Royal LePage® is a registered trademark of Bridgemarq Real Estate Services.</p>
       <a href="#top" class="to-top">Back to top ↑</a>
     </div>
+    <p class="credit">Website by <a href="https://themagolabs.com" target="_blank" rel="noopener">Mago Labs</a> <span class="heart" aria-hidden="true">♥</span></p>
   </div>
 </footer>
 
@@ -582,6 +586,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="assets/js/main.js?v=15"></script>
+<script src="assets/js/main.js?v=16"></script>
 </body>
 </html>
