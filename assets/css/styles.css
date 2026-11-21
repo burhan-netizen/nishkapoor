@@ -107,7 +107,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .nav.hide{transform:translateY(-100%)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
 .nav-logo{display:flex;align-items:center;gap:16px}
-.nav-logo img{height:46px;width:auto}
+.nav-logo img{height:54px;width:auto}
 .nav-logo img.nav-rlp{height:26px}
 .nav-div{width:1px;height:30px;background:var(--line)}
 .nav-links{display:flex;gap:6px;list-style:none;margin:0;padding:0}
@@ -683,7 +683,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 @media (max-width:760px){
   body{font-size:16px}
   .nav-in{height:70px}
-  .nav-logo img{height:38px}
+  .nav-logo img{height:44px}
   .nav-logo{gap:10px}
   .nav-logo img.nav-rlp{height:20px}
   .nav-cta .btn{display:none}
