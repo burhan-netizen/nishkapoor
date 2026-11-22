@@ -614,7 +614,7 @@
   function setupScroll() {
     // headlines: soft blur-in (whole lines, no word splitting)
     $$('[data-split]').forEach(h => {
-      if (h.closest('.hero')) return;
+      if (h.closest('.hero') || h.classList.contains('footer-big')) return; // footer-big has its own scrub tween
       const lines = $$('.line', h);
       gsap.from(lines.length ? lines : [h], { opacity: 0, filter: 'blur(16px)', y: 18, duration: 1.4, ease: 'power3.out', stagger: .14,
         clearProps: 'filter,transform', scrollTrigger: { trigger: h, start: 'top 88%', once: true } });
@@ -651,7 +651,7 @@
     gsap.from('.give', { y: 40, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: .1, scrollTrigger: { trigger: '.give-grid', start: 'top 85%' } });
     ScrollTrigger.batch('.frame', { start: 'top 92%', onEnter: b => gsap.from(b, { y: 50, opacity: 0, duration: 1, ease: 'expo.out', stagger: .05 }), once: true });
     // footer big
-    gsap.from('.footer-big', { y: 60, opacity: .2, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'top 30%', scrub: true } });
+    gsap.fromTo('.footer-big', { y: 60, opacity: .2 }, { y: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'top 30%', scrub: true } });
 
     // refresh after media loads
     addEventListener('load', () => ScrollTrigger.refresh());
